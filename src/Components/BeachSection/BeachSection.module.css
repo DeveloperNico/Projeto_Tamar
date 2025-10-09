@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Areia */
+.sand {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  inset: 0;
+  background-color: #f7e9b4;
+}
+
+/* Mar */
+.sea {
+  position: absolute;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: #000;
+  top: 30%;
+  text-align: justify;
+}
