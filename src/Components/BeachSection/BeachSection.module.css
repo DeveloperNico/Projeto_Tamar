@@ -10,15 +10,10 @@
   align-items: flex-end;
   position: absolute;
   inset: 0;
-  background-color: #f7e9b4;
+  background-color: #ddd0a2;
 }
 
-/* Mar */
-.sea {
-  position: absolute;
-  width: 100%;
-}
-
+/* Conteúdo */
 .content {
   position: relative;
   z-index: 1;
@@ -26,4 +21,71 @@
   color: #000;
   top: 30%;
   text-align: justify;
+
+  & p {
+    margin-bottom: 20px;
+  }
+}
+
+/* Agrupamento das tartarugas */
+.turtleGroup {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Tartaruga principal */
+.turtleCenter img {
+  width: 80px;
+  height: auto;
+  position: relative;
+  transform: rotateZ(330deg);
+  animation: walkMain 5s linear infinite alternate;
+}
+
+/* Filhotes — menores e posições diferentes */
+.turtleLeft img {
+  width: 30px;
+  height: auto;
+  position: relative;
+  margin-bottom: 30px;
+  transform: rotateZ(330deg);
+}
+
+.turtleRight img {
+  width: 30px;
+  height: auto;
+  position: relative;
+  transform: rotateZ(330deg);
+}
+
+/* Animações */
+.turtleLeft img {
+  animation: walkLeft 6s ease-in-out infinite alternate;
+}
+
+.turtleRight img {
+  animation: walkRight 6s ease-in-out infinite alternate;
+}
+
+/* Tartaruga principal anda mais suave */
+@keyframes walkMain {
+  from { transform: rotateZ(330deg) translate(0, 0); }
+  to   { transform: rotateZ(330deg) translate(60px, -40px); }
+}
+
+/* Filhote esquerdo anda devagarinho */
+@keyframes walkLeft {
+  from { transform: rotateZ(330deg) translate(0, 0); }
+  to   { transform: rotateZ(330deg) translate(30px, -10px); }
+}
+
+/* Filhote direito anda pra frente (menos distância) */
+@keyframes walkRight {
+  from { transform: rotateZ(330deg) translate(0, 0); }
+  to   { transform: rotateZ(330deg) translate(30px, -10px); }
 }
