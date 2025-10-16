@@ -10,9 +10,8 @@ export function Header() {
 
       <nav>
         <ul className={styles.navList}>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#home">Ínicio</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
