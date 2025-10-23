@@ -10,7 +10,7 @@ export function ImpactSection() {
         <div className={styles.card}>
           <img src={canudoPlastico} alt="Canudo plástico poluindo o oceano" />
           <p>
-            Canudos plásticos são responsáveis por uma grande parte dos resíduos que atingem os oceanos, afetando diretamente a vida marinha, especialmente tartarugas e aves.
+            Canudos de plásticos são responsáveis por uma grande parte dos resíduos que atingem os oceanos, afetando diretamente a vida marinha, especialmente tartarugas e aves.
           </p>
         </div>
         <div className={styles.card}>

@@ -10,12 +10,12 @@ export function StoriesSection() {
         <div className={styles.card}>
           <img src={depo1} alt="Voluntário segurando uma tartaruga resgatada" />
           <p>"Participar do Projeto Tamar mudou minha visão sobre o cuidado com o oceano. Cada tartaruga salva é um símbolo de esperança!"</p>
-          <span>— Ana, voluntária</span>
+          <span>— Roberto, voluntária</span>
         </div>
         <div className={styles.card}>
           <img src={depo2} alt="Crianças em atividade de educação ambiental" />
           <p>"Aprender sobre o impacto do plástico me fez mudar hábitos e inspirar minha escola a usar apenas canudos de papel."</p>
-          <span>— Lucas, estudante</span>
+          <span>— Ana, estudante</span>
         </div>
       </div>
     </section>

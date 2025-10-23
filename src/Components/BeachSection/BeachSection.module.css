@@ -193,6 +193,10 @@
 
 /* 🔹 Telas grandes (1440px+) */
 @media (min-width: 1440px) {
+  .container {
+    min-height: 120vh;
+  }
+  
   .content {
     gap: 60px;
   }
