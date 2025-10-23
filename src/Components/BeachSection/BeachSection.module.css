@@ -1,76 +1,84 @@
+/* =========================
+   Estrutura geral
+   ========================= */
 .container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #ddd0a2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   Fundo da praia e onda
+   ========================= */
+.sand {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   overflow: hidden;
 }
 
-/* Areia */
-.sand {
-  display: flex;
-  align-items: flex-end;
-  position: absolute;
-  inset: 0;
-  background-color: #ddd0a2;
+.sand img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 250px;
+  animation: waveMove 8s ease-in-out infinite alternate;
 }
 
-/* Conteúdo */
+/* =========================
+   Texto e conteúdo
+   ========================= */
 .content {
   position: relative;
   z-index: 1;
-  padding: 20px;
+  text-align: center;
   color: #554D32;
-  top: 20%;
-  text-align: justify;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-
-  & p {
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-  }
+  gap: 40px;
 }
 
-/* Agrupamento das tartarugas */
+.content p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* =========================
+   Grupo de tartarugas
+   ========================= */
 .turtleGroup {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  padding-left: 30px;
+  gap: 25px;
+  flex-wrap: nowrap;
 }
 
 /* Tartaruga principal */
 .turtleCenter img {
   width: 80px;
   height: auto;
-  position: relative;
   transform: rotateZ(330deg);
   animation: walkMain 5s linear infinite alternate;
 }
 
-/* Filhotes — menores e posições diferentes */
-.turtleLeft img {
-  width: 30px;
-  height: auto;
-  position: relative;
-  margin-bottom: 30px;
-  transform: rotateZ(330deg);
-}
-
+/* Filhotes menores */
+.turtleLeft img,
 .turtleRight img {
-  width: 30px;
+  width: 35px;
   height: auto;
-  position: relative;
   transform: rotateZ(330deg);
 }
 
-/* Animações */
 .turtleLeft img {
+  margin-bottom: 25px;
   animation: walkLeft 6s ease-in-out infinite alternate;
 }
 
@@ -78,20 +86,119 @@
   animation: walkRight 6s ease-in-out infinite alternate;
 }
 
-/* Tartaruga principal anda mais suave */
+/* =========================
+   Animações
+   ========================= */
 @keyframes walkMain {
   from { transform: rotateZ(330deg) translate(0, 0); }
   to   { transform: rotateZ(330deg) translate(60px, -40px); }
 }
 
-/* Filhote esquerdo anda devagarinho */
 @keyframes walkLeft {
   from { transform: rotateZ(330deg) translate(0, 0); }
   to   { transform: rotateZ(330deg) translate(30px, -10px); }
 }
 
-/* Filhote direito anda pra frente (menos distância) */
 @keyframes walkRight {
   from { transform: rotateZ(330deg) translate(0, 0); }
   to   { transform: rotateZ(330deg) translate(30px, -10px); }
+}
+
+/* Movimento da onda */
+@keyframes waveMove {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-15px); }
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+/* 🔹 Telas até 767px (celulares) */
+@media (max-width: 767px) {
+  .content p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .turtleGroup {
+    gap: 15px;
+  }
+
+  .turtleCenter img {
+    width: 60px;
+  }
+
+  .turtleLeft img,
+  .turtleRight img {
+    width: 25px;
+  }
+
+  .sand img {
+    max-height: 180px;
+  }
+}
+
+/* 🔹 Tablets (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .content p {
+    font-size: 22px;
+  }
+
+  .turtleCenter img {
+    width: 90px;
+  }
+
+  .turtleLeft img,
+  .turtleRight img {
+    width: 40px;
+  }
+
+  .sand img {
+    max-height: 230px;
+  }
+}
+
+/* 🔹 Laptops (1024px a 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .content p {
+    font-size: 24px;
+  }
+
+  .turtleCenter img {
+    width: 100px;
+  }
+
+  .turtleLeft img,
+  .turtleRight img {
+    width: 45px;
+  }
+
+  .sand img {
+    max-height: 250px;
+  }
+}
+
+/* 🔹 Telas grandes (1440px+) */
+@media (min-width: 1440px) {
+  .content {
+    gap: 60px;
+  }
+
+  .content p {
+    font-size: 26px;
+  }
+
+  .turtleCenter img {
+    width: 120px;
+  }
+
+  .turtleLeft img,
+  .turtleRight img {
+    width: 55px;
+  }
+
+  .sand img {
+    max-height: 300px;
+  }
 }

@@ -5,19 +5,14 @@ import tartaruga from '../../assets/Icons/tartaruga.png';
 export function BeachSection() {
   return (
     <section id='home' className={styles.container}>
-      {/* Areia */}
+      {/* Fundo de areia e ondas */}
       <div className={styles.sand}>
-        <img src={ondaGif} alt="Gif de onda" />
-        <img src={ondaGif} alt="Gif de onda" />
-        <img src={ondaGif} alt="Gif de onda" />
+        <img src={ondaGif} alt="Onda do mar" />
       </div>
 
+      {/* Conteúdo principal */}
       <div className={styles.content}>
-        <div>
-          <p>
-            Cada tartaruga salva é um oceano de esperança.
-          </p>
-        </div>
+        <p>Cada tartaruga salva é um oceano de esperança.</p>
 
         <div className={styles.turtleGroup}>
           <div className={styles.turtleLeft}>

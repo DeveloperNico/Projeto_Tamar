@@ -1,0 +1,49 @@
+.stories {
+  background-color: #f0f7fa;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.stories h2 {
+  font-size: 22px;
+  color: #2d5568;
+  margin-bottom: 20px;
+}
+
+.depoimentos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #3b728b;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .depoimentos {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
