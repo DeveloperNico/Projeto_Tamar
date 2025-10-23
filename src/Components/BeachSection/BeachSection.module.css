@@ -3,7 +3,7 @@
    ========================= */
 .container {
   position: relative;
-  min-height: 100vh;
+  min-height: 40vh;
   overflow: hidden;
   background-color: #ddd0a2;
   display: flex;
@@ -57,7 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  margin-top: 40px;
   flex-wrap: nowrap;
 }
 
@@ -116,6 +116,10 @@
 
 /* 🔹 Telas até 767px (celulares) */
 @media (max-width: 767px) {
+  .container {
+    min-height: 80vh;
+  }
+  
   .content p {
     font-size: 18px;
     padding: 0 10px;
@@ -141,6 +145,10 @@
 
 /* 🔹 Tablets (768px a 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    min-height: 100vh;
+  }
+  
   .content p {
     font-size: 22px;
   }
@@ -161,6 +169,10 @@
 
 /* 🔹 Laptops (1024px a 1439px) */
 @media (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    min-height: 120vh;
+  }
+  
   .content p {
     font-size: 24px;
   }
