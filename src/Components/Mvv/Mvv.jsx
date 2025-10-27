@@ -18,14 +18,20 @@ export function Mvv() {
         <div className={styles.card}>
           <h3>Visão</h3>
           <p>
-            Um futuro sustentável, onde o mar e a vida coexistem em harmonia.
+            Ser reconhecida como referência mundial na conservação das tartarugas marinhas e na promoção de práticas sustentáveis que integrem ciência, comunidade e natureza.
+          </p>
+          <p>
+            Buscamos inspirar pessoas e instituições a adotarem atitudes que garantam a preservação dos oceanos e o equilíbrio ambiental para as futuras gerações.
           </p>
         </div>
 
         <div className={styles.card}>
           <h3>Valores</h3>
           <p>
-            Respeito à natureza, educação ambiental e trabalho comunitário.
+            Nosso trabalho é guiado pelo respeito à vida marinha, pela ética e pela transparência em todas as ações realizadas.
+          </p>
+          <p>
+            Valorizamos a educação ambiental, o engajamento das comunidades costeiras e a cooperação científica como pilares para transformar consciência em atitude.
           </p>
         </div>
       </div>
