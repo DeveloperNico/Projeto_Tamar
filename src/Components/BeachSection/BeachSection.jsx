@@ -8,6 +8,8 @@ export function BeachSection() {
       {/* Fundo de areia e ondas */}
       <div className={styles.sand}>
         <img src={ondaGif} alt="Onda do mar" />
+        <img src={ondaGif} alt="Onda do mar" />
+        <img src={ondaGif} alt="Onda do mar" />
       </div>
 
       {/* Conteúdo principal */}

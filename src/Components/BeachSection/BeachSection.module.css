@@ -24,11 +24,10 @@
 }
 
 .sand img {
-  width: 100%;
+  width: 40%;
   height: auto;
   object-fit: cover;
   max-height: 250px;
-  animation: waveMove 8s ease-in-out infinite alternate;
 }
 
 /* =========================
@@ -137,10 +136,6 @@
   .turtleRight img {
     width: 25px;
   }
-
-  .sand img {
-    max-height: 180px;
-  }
 }
 
 /* 🔹 Tablets (768px a 1023px) */
@@ -161,10 +156,6 @@
   .turtleRight img {
     width: 40px;
   }
-
-  .sand img {
-    max-height: 230px;
-  }
 }
 
 /* 🔹 Laptops (1024px a 1439px) */
@@ -184,10 +175,6 @@
   .turtleLeft img,
   .turtleRight img {
     width: 45px;
-  }
-
-  .sand img {
-    max-height: 250px;
   }
 }
 
@@ -212,9 +199,5 @@
   .turtleLeft img,
   .turtleRight img {
     width: 55px;
-  }
-
-  .sand img {
-    max-height: 300px;
   }
 }
